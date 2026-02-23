@@ -1,0 +1,80 @@
+# §9VortexAC §7Configuration
+# Dark Blue themed anti-cheat
+
+# General settings
+settings: true
+ :
+  enabled auto-update: true
+  
+# §9§lANTI-CHEAT CHECKS
+# These checks detect various types of cheating
+# Each check has multiple violations before action
+checks:
+  # Speed hack detection
+  speed:
+    enabled: true
+    max-speed: 0.85
+    violation-threshold: 5
+    action: "KICK"
+    grace-period: 3
+    
+  # Fly hack detection  
+  fly:
+    enabled: true
+    violation-threshold: 5
+    action: "KICK"
+    grace-period: 3
+    
+  # Jesus/Water walking
+  jesus:
+    enabled: true
+    violation-threshold: 3
+    action: "KICK"
+    
+  # Nuker (fast mining)
+  nuker:
+    enabled: true
+    max-blocks-per-second: 25
+    violation-threshold: 4
+    action: "KICK"
+    
+  # Reach (hit from far distance)
+  reach:
+    enabled: true
+    max-reach: 3.5
+    violation-threshold: 4
+    action: "KICK"
+    
+  # Velocity (knockback hack)
+  velocity:
+    enabled: true
+    violation-threshold: 5
+    action: "KICK"
+
+# §9§lALERTS SYSTEM
+alerts:
+  enabled: true
+  show-to-ops: true
+  show-world: true
+  alert-format: "§9VortexAC §8» §7%player% §cfailed §9%check% §7(%vl% vl)"
+  broadcast-alerts: false
+  
+# §9§lPUNISHMENT SETTINGS
+# Configure what happens when players fail checks
+punishments:
+  ban-on-reach: false
+  kick-message: "§9VortexAC §8» §cYou were flagged for §9%check%§c.\n§7If you believe this is a false positive, appeal at your discord."
+  log-to-file: true
+  
+# §9§lFALSE POSITIVE PREVENTION
+# Extra safety measures to prevent banning innocent players
+safety:
+  require-async-ping: true
+  min-playtime-seconds: 30
+  bypass-permission: "vortex.bypass"
+  trust-players: false
+  
+# §9§lSTAFF COMMANDS
+staff:
+  alert-permission: "vortex.alerts"
+  admin-permission: "vortex.admin"

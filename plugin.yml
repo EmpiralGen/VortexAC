@@ -1,0 +1,19 @@
+name: VortexAC
+version: 1.0.0
+main: com.vortexac.VortexAC
+author: You
+description: VortexAC - Advanced Anti-Cheat for Minecraft
+
+commands:
+  vortex:
+    description: VortexAC main command
+    usage: /vortex <reload|stats|checks|help>
+    permission: vortex.admin
+  ban:
+    description: Permanently ban a player
+    usage: /ban <player> <reason>
+    permission: vortex.ban
+  tempmute:
+    description: Temporarily mute a player
+    usage: /tempmute <player> <duration> <reason>
+    permission: vortex.tempmute
